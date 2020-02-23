@@ -134,8 +134,6 @@ def do_echo(update, context):
 
         update.message.reply_text(text=text, parse_mode='Markdown')
 
-        print("Sent Answer to user, predicted: {}".format(text))
-
     else:
 
         update.message.reply_text("Если ты отправишь мне картинку файлом\n" \
@@ -166,18 +164,8 @@ def send_prediction_on_photo(update, context):
         text += ' '.join(generate_caption(img, t=5.)[1:-1]) + '\n'
 
     update.message.reply_text(text=text, parse_mode='Markdown')
-    print("Sent Answer to user, predicted: {}".format(class_))
     end_time = time.process_time()
     print('Duration of prediction: {}'.format(end_time - start_time))
-
-def get_keyboard(titles, dotabuffurl, youtubeguide):
-
-    keyboard = [
-        InlineKeyboardButton(text='Giude', callback_data=titles['callback_button_1'], url =youtubeguide),
-        InlineKeyboardButton(text='Dotabuff', callback_data=titles['callback_button_2'], url =dotabuffurl),
-    ]
-
-    return InlineKeyboardMarkup([keyboard])
 
 def error(update, context):
     """Log Errors caused by Updates."""
