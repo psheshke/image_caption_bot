@@ -4,9 +4,7 @@ cffi==1.14.3
 chardet==3.0.4
 cryptography==3.1.1
 decorator==4.4.2
-idna==2.10
 numpy @ file:///C:/ci/numpy_and_numpy_base_1596233945180/work
-olefile==0.46
 Pillow @ file:///C:/ci/pillow_1602782968170/work
 pycparser==2.20
 pygame==1.9.6
